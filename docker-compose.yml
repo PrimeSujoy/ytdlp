@@ -1,0 +1,17 @@
+services:
+  bot:
+    build: .
+    container_name: nextube-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - nextube_data:/data
+    ports:
+      - "${PORT:-7860}:${PORT:-7860}"
+    environment:
+      PYTHONUNBUFFERED: "1"
+      DATA_DIR: /data
+      PORT: ${PORT:-7860}
+
+volumes:
+  nextube_data:

@@ -1,0 +1,16 @@
+# WZGram is a maintained Pyrogram-compatible MTProto fork. It provides the
+# same `pyrogram` import namespace plus WarpCrypto wheels for Python 3.12.
+wzgram==3.0.36
+motor>=3.3.2
+pymongo>=4.6.1
+# The default extra includes the matching yt-dlp-ejs challenge scripts needed
+# for full YouTube support with Node/Deno runtimes.
+# curl-cffi provides TLS fingerprint impersonation to bypass bot detection.
+yt-dlp[default,curl-cffi]>=2025.01.26
+httpx[http2]>=0.27.0
+Pillow>=10.2.0
+psutil>=5.9.8
+aiofiles>=23.2.1
+speedtest-cli==2.1.3
+aiohttp>=3.9.0
+python-dotenv>=1.0.1

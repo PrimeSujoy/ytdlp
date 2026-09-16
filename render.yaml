@@ -1,0 +1,25 @@
+# Don't Remove Credit Tg - @NexonBots
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@NexonBots
+services:
+  - type: web
+    name: nextube-bot
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: DB_URI
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: DUMP_CHANNEL
+        value: "0"
+      - key: DATA_DIR
+        value: /data

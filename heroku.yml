@@ -1,0 +1,6 @@
+# Don't Remove Credit Tg - @NexonBots
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: python main.py

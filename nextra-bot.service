@@ -1,0 +1,17 @@
+[Unit]
+Description=NexTube YouTube Downloader Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/nextube-bot
+ExecStart=/opt/nextube-bot/venv/bin/python main.py
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+Environment=DATA_DIR=/opt/nextube-bot/data
+EnvironmentFile=-/opt/nextube-bot/.env
+
+[Install]
+WantedBy=multi-user.target

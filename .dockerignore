@@ -1,0 +1,16 @@
+# Don't Remove Credit Tg - @NexonBots
+.git
+.gitignore
+.env
+.streamlit
+__pycache__
+*.py[cod]
+*.session*
+*.log
+bot-restart.*.log
+.runtime_data
+data
+downloads
+cookies
+venv
+.venv

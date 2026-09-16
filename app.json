@@ -1,0 +1,19 @@
+{
+  "name": "NexTube Bot",
+  "description": "Advanced Telegram YouTube downloader bot. Credit: @NexonBots",
+  "stack": "container",
+  "env": {
+    "DB_URI": {"description": "MongoDB connection URI", "required": true},
+    "API_ID": {"description": "Telegram API ID", "required": true},
+    "API_HASH": {"description": "Telegram API hash", "required": true},
+    "BOT_TOKEN": {"description": "Telegram bot token", "required": true},
+    "OWNER_ID": {"description": "Telegram owner user ID", "required": true},
+    "ADMIN_ID": {"description": "Comma or space separated admin IDs", "required": false},
+    "FORCESUB": {"description": "Comma or space separated force-sub chats", "required": false},
+    "DUMP_CHANNEL": {"description": "Dump/cache channel ID, or 0 to disable", "value": "0", "required": false},
+    "DATA_DIR": {"description": "Runtime data directory", "value": "/data", "required": false}
+  },
+  "formation": {
+    "web": {"quantity": 1, "size": "eco"}
+  }
+}
